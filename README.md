@@ -15,13 +15,12 @@ Version 0.0.1 - 26.02.2015
 * Use a default store or use a customly named store with it's own collection.
 * Use a custom store with a custom collection. 
 
-
 ## Installation
  
-
- ```bash
+```bash
 meteor add theduke:keyvalstore
  ```
+
 
 ## Usage
 
@@ -79,6 +78,7 @@ var store = KeyValStore.store('mystore', {
 });
 ```
 
+
 ## API
 
 Function|Description
@@ -92,10 +92,12 @@ KeyValStore.get|Same as Store.get above, but uses default store.
 KeyValStore.set|Same as Store.get above, but uses default store.
 KeyValStore.remove|Same as Store.get above, but uses default store.
 
-License
--------
+
+## License
+
 
 This project is under the MIT license. For details see LICENSE and http://en.wikipedia.org/wiki/MIT_License.
+
 
 ## Authors
 
