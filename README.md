@@ -12,16 +12,15 @@ and are automatically parsed and returned as a regular Javascript object.
  You can use a default store or dynamically create new stores, even with a custom collection.
 
 
- Installation
- ------------
+## Installation
+ 
 
  ```bash
 meteor add theduke:keyvalstore
  ```
 
 
- Usage
- -----
+## Usage
 
 * Use the default store:
 
@@ -77,8 +76,7 @@ var store = KeyValStore.store('mystore', {
 });
 ```
 
-API
----
+## API
 
 Function|Description
 --------|-----------
@@ -96,7 +94,7 @@ License
 
 This project is under the MIT license. For details see LICENSE and http://en.wikipedia.org/wiki/MIT_License.
 
-Authors
--------
+## Authors
+
 
 * Christoph Herzog - chris@theduke.at
