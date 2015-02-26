@@ -5,6 +5,7 @@ This Atmosphere package for the Meteor framework adds a MongoDB based key-value 
 server side persistence for caching or configuration. Supports storing all JSON compatible Javascript objects, 
 multiple stores and expiring entries at a certain time.
 
+Version 0.0.1 - 26.02.2015
 
 ## Features
 
