@@ -1,27 +1,28 @@
 theduke:keyvalstore
 ===================
 
-This Atmosphere package for the Meteor framework adds a MongoDB based Key-Value store for convenient and drop-in
+This Atmosphere package for the Meteor framework adds a MongoDB based key-value store for convenient and drop-in
 server side persistence for caching or configuration. Supports storing all JSON compatible Javascript objects, 
 multiple stores and expiring entries at a certain time.
 
-You can store all Javascript objects that can be stringified to JSON like numbers, Arrays and arbitrarily nested Objects. 
-They will be stored as a string for performance,
-and are automatically parsed and returned as a regular Javascript object. 
 
- You can use a default store or dynamically create new stores, even with a custom collection.
+## Features
+
+* Store strings or all JSON serializable Javascript objects, arbitrarily nested. (Object, Array, Number, Boolean)
+* Objects are stored as strings for performance, but are parsed and returned fully on retrieval.
+* Let entries expire at a certain time.
+* Use a default store or use a customly named store with it's own collection.
+* Use a custom store with a custom collection. 
 
 
- Installation
- ------------
+## Installation
+ 
 
  ```bash
 meteor add theduke:keyvalstore
  ```
 
-
- Usage
- -----
+## Usage
 
 * Use the default store:
 
@@ -77,8 +78,7 @@ var store = KeyValStore.store('mystore', {
 });
 ```
 
-API
----
+## API
 
 Function|Description
 --------|-----------
@@ -96,7 +96,7 @@ License
 
 This project is under the MIT license. For details see LICENSE and http://en.wikipedia.org/wiki/MIT_License.
 
-Authors
--------
+## Authors
+
 
 * Christoph Herzog - chris@theduke.at
