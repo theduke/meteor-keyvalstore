@@ -1,2 +1,7 @@
 Version 0.0.1: 26.02.2015
-- Initial release with working store.
+  * Initial release with working store.
+
+Version 0.0.2: 28.02.2015
+  * Added store.removeAll() method for deleting all entries.
+  * Added  store.getCollection() method that returns the stores collection object.
+ 

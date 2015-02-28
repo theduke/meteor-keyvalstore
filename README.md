@@ -5,7 +5,7 @@ This Atmosphere package for the Meteor framework adds a MongoDB based key-value 
 server side persistence for caching or configuration. Supports storing all JSON compatible Javascript objects, 
 multiple stores and expiring entries at a certain time.
 
-Version 0.0.1 - 26.02.2015
+Version 0.0.2 - 28.02.2015
 
 ## Features
 
@@ -87,7 +87,9 @@ KeyValStore.store(name)|Return a store, creating it if it was not initialized ye
 Store.get(key, defaultValue)|Return the value stored for a key if it is set and has not expired. Optionally set a default which is returned if the key is not set.
 Store.set(key, value, expiresAt)|Set a key to a certain value. Optionally supply a Javascript Date object to specify an expiry time.
 Store.remove(key)|Delete a key from the store.
---------|-----------
+Store.removeAll()|Delete all keys from the store. Returns number of deleted items.
+Store.getCollection()|Returns the collection object used by the store.
+|
 KeyValStore.get|Same as Store.get above, but uses default store.
 KeyValStore.set|Same as Store.get above, but uses default store.
 KeyValStore.remove|Same as Store.get above, but uses default store.

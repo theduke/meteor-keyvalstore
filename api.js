@@ -35,6 +35,14 @@ KeyValStore = (function() {
 
       remove: function(key) {
         collection.remove({key: key});
+      },
+
+      removeAll: function() {
+        return collection.remove({});
+      },
+
+      getCollection: function() {
+        return collection;
       }
     };
   };
