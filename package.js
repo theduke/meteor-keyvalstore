@@ -1,7 +1,7 @@
 /* Package info. */
 Package.describe({
   summary: "A flexible key-value store using MongobDB",
-  version: "0.0.1",
+  version: "0.0.2",
   name: "theduke:keyvalstore",
   git: "https://github.com/theduke/meteor-keyvalstore"
 });
