@@ -8,11 +8,11 @@ KeyValStore = (function() {
     }, options);
 
     var collection = options.collection ||  new Mongo.Collection('keyvalstore_' + name);
-    collection._ensureIndex({key: 1});
+    collection.createIndexAsync({key: 1});
 
     return {
       get: function(key, defaultVal) {
-        var result = collection.findOne({key: key});
+        var result = collection.findOneAsync({key: key});
 
         if (result === undefined || (result.expiresAt && result.expiresAt <= new Date())) {
           return defaultVal;
@@ -23,7 +23,7 @@ KeyValStore = (function() {
       set: function(key, value, expiresAt) {
         var isJson = typeof(key) !== 'string';
 
-        collection.upsert({key: key}, {
+        collection.upsertAsync({key: key}, {
           $set: {
             key: key,
             value: isJson ? JSON.stringify(value) : value,
@@ -34,11 +34,11 @@ KeyValStore = (function() {
       },
 
       remove: function(key) {
-        collection.remove({key: key});
+        collection.removeAsync({key: key});
       },
 
       removeAll: function() {
-        return collection.remove({});
+        return collection.removeAsync({});
       },
 
       getCollection: function() {
