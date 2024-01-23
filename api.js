@@ -2,13 +2,13 @@
 KeyValStore = (function() {
   var stores = {};
 
-  function build(name, options) {
+  async function build(name, options) {
     options = _.extend({
       collection: null
     }, options);
 
     var collection = options.collection ||  new Mongo.Collection('keyvalstore_' + name);
-    collection.createIndexAsync({key: 1});
+    await collection.createIndexAsync({key: 1});
 
     return {
       get: function(key, defaultVal) {
